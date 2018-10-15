@@ -13,10 +13,7 @@ void	ft_rostring(char *str, int firstword)
 		if (str[i] != ' ' && str[i] != '\t')
 		{
 			if (j == 0)
-			{
-				printf("%d\n", i);
 				i = i + firstword;
-			}
 			else
 			{
 				while (str[i] && str[i] != ' ' && str[i] != '\t')
@@ -104,7 +101,7 @@ void	ft_word(char *str)
 
 int	main(int ac, char **av)
 {
-	if (ac == 2)
+	if (ac >= 2)
 		ft_word(av[1]);
 	write(1, "\n", 1);
 	return(0);

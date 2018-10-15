@@ -1,0 +1,58 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r2p22.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Mon Oct 15 18:22:35 CEST 2018
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2018/c-exam-alone-in-the-dark-beginner/practice-exam_20181015/jebossue
+
+= Git history ==================================================================
+$> git -C /var/folders/w3/fbc0x9h16md3rtzz7d6x2pp00000gq/T/tmp2Bq_3Y/user log --pretty='%H - %an, %ad : %s'
+2caadfb3929c46f0e5ec09d35a8b5e1a7a608c28 - Jean BOSSUET-TIERCELIN, Mon Oct 15 18:22:15 2018 +0200 : maybe
+9c58d1fcd602348e49431bab2447651263e81b42 - Jean BOSSUET-TIERCELIN, Mon Oct 15 17:37:11 2018 +0200 : why not
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/w3/fbc0x9h16md3rtzz7d6x2pp00000gq/T/tmp2Bq_3Y/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  517 Oct 15 18:22 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Oct 15 18:22 flood_fill
+
+/var/folders/w3/fbc0x9h16md3rtzz7d6x2pp00000gq/T/tmp2Bq_3Y/user/flood_fill:
+total 8
+-rw-r--r--  1 deepthought  deepthought  601 Oct 15 18:22 flood_fill.c
+ 
+= flood_fill ===================================================================
+$> clang -Wextra -Wall -Werror flood_fill.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./ahystsyz28z1cgbzqw8s7ck3 test1
+$> diff -U 3 user_output_test1 test1.output | cat -e
+--- user_output_test1	2018-10-15 18:22:39.000000000 +0200$
++++ test1.output	2018-10-15 18:22:39.000000000 +0200$
+@@ -1,5 +1,5 @@$
+ 1 1 1 1 1 1 1 1 $
+-1 F 0 0 1 0 0 1 $
+-1 F 0 1 0 0 0 1 $
++1 F F F 1 0 0 1 $
++1 F F 1 0 0 0 1 $
+ 1 F 1 0 0 0 0 1 $
+ 1 1 0 0 0 0 0 0 $
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================

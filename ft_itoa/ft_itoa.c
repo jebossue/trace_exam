@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+//GESTION MAX MIN INT
+
 void	ft_doit(char **tab, int isneg, int size, int nbr)
 {
 	if (isneg)

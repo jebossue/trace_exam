@@ -1,0 +1,80 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e2r13p5.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Mon Oct 15 18:40:24 CEST 2018
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2018/c-exam-alone-in-the-dark-beginner/practice-exam_20181015/jebossue
+
+= Git history ==================================================================
+$> git -C /var/folders/rc/qq9vsrjd3tddn7rb3r4ngdx00000gq/T/tmpL3I4lG/user log --pretty='%H - %an, %ad : %s'
+715dcb6915311de908ec378ecbc61c959c058269 - Jean BOSSUET-TIERCELIN, Mon Oct 15 18:40:06 2018 +0200 : vds
+d19ae7a93470a5d6b6fc95a45635598f92e3856b - Jean BOSSUET-TIERCELIN, Mon Oct 15 18:38:30 2018 +0200 : vds
+2caadfb3929c46f0e5ec09d35a8b5e1a7a608c28 - Jean BOSSUET-TIERCELIN, Mon Oct 15 18:22:15 2018 +0200 : maybe
+9c58d1fcd602348e49431bab2447651263e81b42 - Jean BOSSUET-TIERCELIN, Mon Oct 15 17:37:11 2018 +0200 : why not
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/rc/qq9vsrjd3tddn7rb3r4ngdx00000gq/T/tmpL3I4lG/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  1002 Oct 15 18:40 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Oct 15 18:40 flood_fill
+drwxr-xr-x  3 deepthought  deepthought   102 Oct 15 18:40 ft_itoa
+
+/var/folders/rc/qq9vsrjd3tddn7rb3r4ngdx00000gq/T/tmpL3I4lG/user/flood_fill:
+total 8
+-rw-r--r--  1 deepthought  deepthought  601 Oct 15 18:40 flood_fill.c
+
+/var/folders/rc/qq9vsrjd3tddn7rb3r4ngdx00000gq/T/tmpL3I4lG/user/ft_itoa:
+total 8
+-rw-r--r--  1 deepthought  deepthought  664 Oct 15 18:40 ft_itoa.c
+ 
+= ft_itoa ======================================================================
+$> clang -Wextra -Wall -Werror main.c ft_itoa.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./0tar5zolzmruzi7asa7ob01w 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./8glmv9we1akflng0hnzmnoyt "1" "2" "3" "4" "5" "6"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./bmzzgvunneczgomq6bk7lipx 0
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./m4phoadu62g5jwow3gyrqyrd 2147483647
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./h8s33iw8pg0aprjyrqaxl1du -2147483648
+$> diff -U 3 user_output_test5 test5.output | cat -e
+--- user_output_test5	2018-10-15 18:40:30.000000000 +0200$
++++ test5.output	2018-10-15 18:40:30.000000000 +0200$
+@@ -1 +1 @@$
+--$
++-2147483648$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================
